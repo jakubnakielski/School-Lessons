@@ -4,23 +4,25 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red; */
 }
 
 body {
   min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-image: url("img/papyrus.png");
 }
 
 .container {
-  width: 1500px;
-  margin: 50px auto 0 auto;
+  width: 1200px;
+  margin: 100px auto 0 auto;
 }
 .mainHeader {
   width: 100%;
   padding: 40px 0;
-  background: black;
+  background: #212121;
   display: flex;
   align-items: center;
+  border-radius: 10px 10px 0 0;
 }
 .mainHeader__paragraph {
   color: white;
@@ -30,20 +32,39 @@ body {
 }
 
 .menu {
-  height: 500px;
-  width: 200px;
-  background: brown;
+  width: 15%;
+  background: #3f51b5;
 }
 
 .menu__item {
   list-style: none;
   text-align: center;
-  padding: 10px 0;
+  position: relative;
 }
+.menu__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: scale(0.5);
+  background: black;
+  transition: transform 0.3s ease-out;
+}
+.menu__item:hover:not(:last-child)::after {
+  transform: scale(1);
+}
+
 .menu__link {
-  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+  text-decoration: none; /*Where from the pointer?*/
   color: #ccc;
-  transition: 0.3s ease-out;
+  transition: color 0.2s ease-out;
 }
 .menu__link:hover {
   color: black;
@@ -52,29 +73,39 @@ body {
 .main {
   display: flex;
   flex-direction: row;
+  height: 500px;
 }
 .article {
-  width: 600px;
-  padding: 30px;
+  width: 60%;
+  padding: 60px;
+  /* background-image: url("img/dot-grid.png"); */
+  background: white; /*WHY ANOTHER IMAGE? XDDDDD*?*/
 }
 .article__header {
   font-size: 1.5em;
 }
+.article__paragraph {
+  margin-top: 1em;
+}
 
 .ad {
-  width: 300px;
-  min-height: 500px;
-  background: grey;
+  width: 25%;
+  background: #757575;
 }
 
 .ad__image {
-  background-image: url("");
-  background: cover;
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
+  background-image: url("http://skatefestfairfax.com/wp-skatefest/wp-content/uploads/2016/06/Vertical-banner.jpg");
+  background-size: contain;
 }
 
 .footer {
   width: 100%;
-  background: black;
+  background: #212121;
   padding: 30px 0;
   color: white;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
 }
