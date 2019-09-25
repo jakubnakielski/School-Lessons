@@ -42,6 +42,7 @@ body {
   list-style: none;
   text-align: center;
   position: relative;
+  transition: 0.5s;
 }
 .menu__item:not(:last-child)::after {
   content: "";
@@ -141,9 +142,46 @@ body {
     margin: 0;
     height: 100%;
   }
+  .menu__hamburgerContainer {
+    margin: 10px 20px 0 0;
+    cursor: pointer;
+    /* width: 50px;
+    height: 50px; */
+  }
+  .menu__hamburger {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+  }
+
+  .menu__hamburger::after,
+  .menu__hamburger::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+  }
+  .menu__hamburger::after {
+    bottom: -10px;
+  }
+
+  .menu__hamburger::before {
+    top: -10px;
+  }
 
   .article {
     width: 100%;
-    height: u;
   }
+}
+
+.toggleMenu {
+  transition: 0.5s;
+  transform: translateX(-700px);
+}
+.toggleColor {
+  color: black;
 }
