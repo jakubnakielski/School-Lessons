@@ -2,16 +2,13 @@ const style = document.createElement("style");
 document.head.appendChild(style);
 
 const hamburger = document.getElementById("hamburger");
-const menu = document.getElementById("menu");
-const menuLink = document.getElementById("menu__link");
-const article = document.querySelector(".article");
+// const sideMenu = document.getElementById("sideMenu");
+const sideMenu = document.querySelector(".sideMenu");
 
 hamburger.addEventListener("click", () => {
-  menu.classList.toggle("sideMenu--isActive");
+  sideMenu.classList.toggle("sideMenu--isActive");
 });
 
-// console.log(article);
-
-// article.addEventListener("click", () => {
-//   menu.classList.remove("toggleMenu");
-// });
+document.querySelector(".header").addEventListener("click", () => {
+  sideMenu.classList.remove("sideMenu--isActive");
+});
