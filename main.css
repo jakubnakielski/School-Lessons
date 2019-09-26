@@ -132,8 +132,12 @@ body {
   color: white;
   text-align: center;
 }
-
-@media (max-width: 800px) {
+@media (min-width: 768px) {
+  .menu__hamburger {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
   .main {
     flex-direction: column;
     min-height: 0;
